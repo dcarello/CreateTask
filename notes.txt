@@ -1,9 +1,0 @@
-ToDo
-   DONE 1) choose random word 
-   DONE 2) display number of chances (six chances)
-   DONE 3) display number of letters using _
-   DONE 4) prompt user for letter and check if valid (not used before, alphabetical letter)
-   DONE 5) if in the word store used letter and update the word to display letter in correct position
-   DONE     6) else just store wrong letter and update number of chances
-   DONE 7) repeat steps 4-6 until number of chances == 0
-
