@@ -55,7 +55,6 @@ class Hangman:
         while self.chances != 0 and win != True:
             print(self.hidden_word)
             print(f"Number of Chances: {self.chances}")
-            # print(key_word)
             letter_guess = self.user_guess(used_letters)
             used_letters.append(letter_guess)
             print(used_letters)

@@ -1,6 +1,8 @@
 import pygame
 from pygame.locals import *
+import random
 
+pygame.init()
 screen_width = 1080
 screen_height = 1080
 screen = pygame.display.set_mode([screen_width, screen_height])
@@ -65,7 +67,31 @@ def draw_window():
     pygame.draw.line(screen, black, (screen_width / 4.5, screen_height / 3.2258064516),
                      (screen_width / 3.9130434783, screen_height / 3.2258064516), 3)
 
+    words = "HI"
+    font = pygame.font.Font('freesansbold.ttf', 32)
+    text = font.render(words, True, black)
+    screen.blit(text, (0, 0))
+
     pygame.display.update()
+
+
+def random_word(self):
+    words = []
+    # opens the file with all the words and puts it in an array
+    f = open("wordList.txt", "r")
+    for line in f:
+        words.append(line[:-1])
+    f.close
+    # returns a random word from the array
+    return random.choice(words)
+
+
+def hide_word(self, key_word):
+    hidden_word = ""
+    # for each letter in the key word it puts an underscore and a space for readability
+    for letter in key_word:
+        hidden_word = hidden_word + '*'
+    return hidden_word
 
 
 def main():
